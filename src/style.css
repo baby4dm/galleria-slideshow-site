@@ -1,1 +1,113 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
+
+@theme {
+  --font-libre: "Libre Baskerville", serif;
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-grey-400: #7d7d7d;
+  --color-grey-200: #d8d8d8;
+  --color-grey-150: #e5e5e5;
+  --color-grey-100: #f3f3f3;
+  --image-gradient-1: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 84%);
+}
+@layer components {
+}
+@layer utilities {
+  .text-preset-1 {
+    font-family: var(--font-libre);
+    font-weight: 700;
+    font-size: 200px;
+    line-height: 115%;
+    letter-spacing: -0.2px;
+  }
+
+  .text-preset-1-mobile {
+    font-family: var(--font-libre);
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 100%;
+    letter-spacing: 0px;
+  }
+
+  .text-preset-2 {
+    font-family: var(--font-libre);
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 115%;
+    letter-spacing: 0px;
+  }
+
+  .text-preset-2-mobile {
+    font-family: var(--font-libre);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 125%;
+    letter-spacing: 0px;
+  }
+
+  .text-preset-3 {
+    font-family: var(--font-libre);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 125%;
+    letter-spacing: 0px;
+  }
+
+  .text-preset-3-mobile {
+    font-family: var(--font-libre);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 200%;
+    letter-spacing: -0.25px;
+  }
+
+  .text-preset-4 {
+    font-family: var(--font-libre);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 135%;
+    letter-spacing: 0px;
+  }
+
+  .text-preset-4-mobile {
+    font-family: var(--font-libre);
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 120%;
+    letter-spacing: 0px;
+  }
+
+  .text-preset-5 {
+    font-family: var(--font-libre);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 125%;
+    letter-spacing: 0px;
+  }
+
+  .text-preset-5-mobile {
+    font-family: var(--font-libre);
+    font-weight: bold;
+    font-size: 9px;
+    line-height: 125%;
+    letter-spacing: 2px;
+  }
+
+  .text-preset-6 {
+    font-family: var(--font-libre);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 125%;
+    letter-spacing: 2.5px;
+  }
+
+  .text-preset-7 {
+    font-family: var(--font-libre);
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 120%;
+    letter-spacing: 2px;
+  }
+}
