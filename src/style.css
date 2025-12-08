@@ -36,3 +36,25 @@
   --tracking-2: 2px;
   --tracking-25: 2.5px;
 }
+@layer components {
+  .gallery-item {
+    @apply relative my-auto;
+  }
+
+  .gallery-img {
+    @apply w-full h-auto block;
+  }
+
+  .gallery-overlay {
+    @apply absolute bottom-0 left-0 w-full p-8 flex flex-col gap-2 
+         bg-gradient-to-t from-black via-black/50 to-transparent text-white;
+  }
+
+  .gallery-overlay h2 {
+    @apply text-preset-2-mobile font-libre leading-125 font-bold;
+  }
+
+  .gallery-overlay p {
+    @apply text-preset-5 opacity-75 leading-125 font-libre;
+  }
+}

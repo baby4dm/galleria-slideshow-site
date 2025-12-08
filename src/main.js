@@ -112,18 +112,29 @@ function renderGallery(items) {
 
 function appendToColumn(columnEl, item) {
   if (!item) return;
+
   const wrapper = document.createElement("div");
+  wrapper.className = "gallery-item";
 
   const img = document.createElement("img");
   img.src =
-    (item.images &&
-      (item.images.thumbnail || item.images.small || item.images[0])) ||
+    item.images?.thumbnail ||
+    item.images?.small ||
+    item.images?.[0] ||
     item.src ||
     "";
   img.alt = item.title || "";
-
-  img.className = "w-full h-auto block";
+  img.className = "gallery-img";
   wrapper.appendChild(img);
+
+  const overlay = document.createElement("div");
+  overlay.className = "gallery-overlay";
+  overlay.innerHTML = `
+    <h2>${item.name || item.title || "Без назви"}</h2>
+    <p>${item.artist?.name || item.author || "Автор невідомий"}</p>
+  `;
+  wrapper.appendChild(overlay);
+
   columnEl.appendChild(wrapper);
 }
 
