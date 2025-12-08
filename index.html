@@ -8,16 +8,17 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/assets/favicon-32x32.png"
+      href="/images/favicon-32x32.png"
     />
     <script type="module" src="/src/style.css"></script>
     <script type="module" src="/src/main.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <title>Galleria slideshow site</title>
   </head>
   <body>
     <load src="./src/components/Header.html" />
     <main>
-      <div id="gallery" class="p-6 grid gap-10 md:grid-cols-2 md:p-12 lg:grid-cols-4"></div>
+      <div id="gallery" class="masonry p-6 md:p-12"></div>
     </main>
   </body>
 </html>
