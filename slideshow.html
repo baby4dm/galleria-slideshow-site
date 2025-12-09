@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <script type="module" src="/src/style.css"></script>
+    <script type="module" src="/src/slideshow.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <title>Galleria slideshow site</title>
+  </head>
+  <body>
+    <load src="./src/components/Header.html" />
+    <main>
+      <div class="flex flex-col gap-10 p-6 md:p-12">
+        <div class="relative">
+          <div class="relative">
+            <img
+              id="hero-img"
+              src="/images/girl-with-pearl-earring/hero-small.jpg"
+              alt=""
+            />
+            <button class="bg-black w-38 h-10 text-white absolute top-4 left-4 font-libre text-preset-7 tracking-2 leading-120 py-[14px] px-4 flex justify-between items-center">
+                <img src="/images/shared/icon-view-image.svg" alt="View image">
+                VIEW IMAGE</button>
+          </div>
+          <div>
+            <h2 id="name">Girl with a Pearl Earring</h2>
+            <h3 id="artist">Vincent Van Gogh</h3>
+            <img
+              id="artist-img"
+              src="/images/arnolfini-portrait/artist.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div>
+          <h1 id="year">1665</h1>
+          <p id="description">
+            The painting is a tronie, the Dutch 17th-century description of a
+            'head' that was not meant to be a portrait. It depicts a European
+            girl wearing an exotic dress, an oriental turban, and what was
+            thought to be a very large pearl as an earring. In 2014, Dutch
+            astrophysicist Vincent Icke raised doubts about the material of the
+            earring and argued that it looks more like polished tin than pearl
+            on the grounds of the specular reflection, the pear shape and the
+            large size of the earring.
+          </p>
+          <a
+            id="source"
+            class="text-preset-5-mobile font-libre font-bold tracking-2 leading-125 text-grey-400 md:text-preset-6 md:tracking-25"
+            href="slideshow.html"
+            >GO TO SOURCE</a
+          >
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div>
+        <div id="progress"></div>
+        <div>
+          <div>
+            <h4 id="name">Girl with a Pearl Earring</h4>
+            <h5 id="artist">Johannes Vermeer</h5>
+          </div>
+          <div>
+            <button id="next-btn">
+              <img src="/images/shared/icon-next-button.svg" alt="Next" />
+            </button>
+            <button id="prev-btn">
+              <img src="/images/shared/icon-back-button.svg" alt="Previous" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

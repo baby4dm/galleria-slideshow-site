@@ -6,7 +6,7 @@ async function loadData() {
 
 function getColumnsCount() {
   if (window.innerWidth < 640) return 1;
-  if (window.innerWidth < 1024) return 2;
+  if (window.innerWidth < 1440) return 2;
   return 4;
 }
 
@@ -130,8 +130,8 @@ function appendToColumn(columnEl, item) {
   const overlay = document.createElement("div");
   overlay.className = "gallery-overlay";
   overlay.innerHTML = `
-    <h2>${item.name || item.title || "Без назви"}</h2>
-    <p>${item.artist?.name || item.author || "Автор невідомий"}</p>
+    <h2>${item.name || item.title || "Undefined"}</h2>
+    <p>${item.artist?.name || item.author || "Undefined"}</p>
   `;
   wrapper.appendChild(overlay);
 

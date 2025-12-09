@@ -38,7 +38,7 @@
 }
 @layer components {
   .gallery-item {
-    @apply relative my-auto;
+    @apply relative my-auto cursor-pointer;
   }
 
   .gallery-img {
