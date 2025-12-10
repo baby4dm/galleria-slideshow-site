@@ -18,7 +18,7 @@
   <body>
     <load src="./src/components/Header.html" />
     <main>
-      <div class="flex flex-col gap-40 p-6 md:p-12">
+      <div class="flex flex-col items-center gap-50 p-6 md:p-12">
         <div class="relative">
           <img
             id="hero-img"
@@ -31,7 +31,9 @@
             <img src="/images/shared/icon-view-image.svg" alt="View image" />
             VIEW IMAGE
           </button>
-          <div class="flex flex-col gap-2 absolute -bottom-20 left-0 bg-white p-6 z-100 mr-10">
+          <div
+            class="flex flex-col gap-2 absolute -bottom-20 left-0 bg-white p-6 z-100 mr-10"
+          >
             <h2 id="name" class="font-libre text-preset-2-mobile leading-125">
               Girl with a Pearl Earring
             </h2>
@@ -41,11 +43,20 @@
             >
               Vincent Van Gogh
             </h3>
+            <img id="artist-img" class="absolute w-16 h-16 -bottom-16 left-4" src="/images/arnolfini-portrait/artist.jpg" alt="Artist">
           </div>
         </div>
         <div class="flex flex-col relative">
-          <h1 id="year" class="text-preset-1-mobile text-grey-100 font-bold absolute -top-25 right-0 -z-10">1665</h1>
-          <p id="description" class="font-libre text-preset-3-mobile text-grey-400 leading-200 font-bold ">
+          <h1
+            id="year"
+            class="text-preset-1-mobile text-grey-100 font-bold absolute -top-25 right-0 -z-10"
+          >
+            1665
+          </h1>
+          <p
+            id="description"
+            class="font-libre text-preset-3-mobile text-grey-400 leading-200 font-bold"
+          >
             The painting is a tronie, the Dutch 17th-century description of a
             'head' that was not meant to be a portrait. It depicts a European
             girl wearing an exotic dress, an oriental turban, and what was
@@ -65,19 +76,47 @@
       </div>
     </main>
     <footer>
-      <div class="px-6">
-        <div id="progress"></div>
-        <div>
+      <div class="mt-16">
+        <div id="progress" class="w-0 h-[1px] bg-black"></div>
+        <div
+          class="px-6 flex items-center py-4 justify-between border-t-[1px] border-grey-150 md:px-12"
+        >
           <div>
-            <h4 id="name-footer">Girl with a Pearl Earring</h4>
-            <h5 id="artist-footer">Johannes Vermeer</h5>
+            <h4
+              id="name-footer"
+              class="text-preset-3-mobile font-bold font-libre leading-200 tracking-minus-025"
+            >
+              Girl with a Pearl Earring
+            </h4>
+            <h5
+              id="artist-footer"
+              class="text-preset-4-mobile font-bold font-libre leading-120 text-grey-400"
+            >
+              Johannes Vermeer
+            </h5>
           </div>
-          <div>
-            <button id="next-btn">
-              <img src="/images/shared/icon-next-button.svg" alt="Next" />
+          <div class="flex items-center gap-6 h-4">
+            <button id="back-btn" class="cursor-pointer">
+              <svg width="26" height="24" xmlns="http://www.w3.org/2000/svg">
+                <g stroke="#000" fill="none" fill-rule="evenodd">
+                  <path
+                    d="M24.166 1.843L3.627 12.113l20.539 10.269V1.843z"
+                    stroke-width="2"
+                  />
+                  <path fill="#D8D8D8" d="M.986.5h-1v22.775h1z" />
+                </g>
+              </svg>
             </button>
-            <button id="prev-btn">
-              <img src="/images/shared/icon-back-button.svg" alt="Previous" />
+            <button id="next-btn" class="cursor-pointer">
+              <svg width="26" height="24" xmlns="http://www.w3.org/2000/svg">
+                <g stroke="#000" fill="none" fill-rule="evenodd">
+                  <path
+                    d="M1.528 1.843l20.538 10.27L1.528 22.382V1.843z"
+                    stroke-width="2"
+                  />
+                  <path fill="#D8D8D8" d="M24.708.5h1v22.775h-1z" />
+                </g>
+              </svg>
             </button>
           </div>
         </div>

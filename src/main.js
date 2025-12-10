@@ -25,9 +25,7 @@ function renderGallery(items) {
   }
 
   if (cols === 1) {
-    items.forEach((item) => {
-      appendToColumn(columns[0], item);
-    });
+    items.forEach((item, i) => appendToColumn(columns[0], item, i));
     return;
   }
 
@@ -41,16 +39,18 @@ function renderGallery(items) {
 
     rows.forEach((row, rIdx) => {
       const [left, right] = row;
+
       if (rIdx === 5 || rIdx === 6) {
         if (right !== undefined) {
-          if (right) appendToColumn(columns[0], right);
-          if (left) appendToColumn(columns[1], left);
+          if (right) appendToColumn(columns[0], right, rIdx * 2 + 1);
+          if (left) appendToColumn(columns[1], left, rIdx * 2 + 0);
           return;
         }
       }
 
-      if (left) appendToColumn(columns[0], left);
-      if (right) appendToColumn(columns[1], right);
+      if (left) appendToColumn(columns[0], left, rIdx * 2 + 0);
+      if (right) appendToColumn(columns[1], right, rIdx * 2 + 1);
+
       if (
         right === undefined &&
         left &&
@@ -60,12 +60,11 @@ function renderGallery(items) {
         const last = columns[0].lastElementChild;
         if (
           last &&
-          last.querySelector &&
           last.querySelector("img") &&
           last.querySelector("img").src.endsWith(getFilename(left))
         ) {
           columns[0].removeChild(last);
-          appendToColumn(columns[1], left);
+          appendToColumn(columns[1], left, rIdx * 2 + 0);
         }
       }
     });
@@ -101,7 +100,7 @@ function renderGallery(items) {
       idxs.forEach((idx, colIndex) => {
         if (idx === undefined) return;
         if (idx >= 0 && idx < items.length) {
-          appendToColumn(columns[colIndex], items[idx]);
+          appendToColumn(columns[colIndex], items[idx], idx);
         }
       });
     }
@@ -110,11 +109,12 @@ function renderGallery(items) {
   }
 }
 
-function appendToColumn(columnEl, item) {
+function appendToColumn(columnEl, item, index) {
   if (!item) return;
 
   const wrapper = document.createElement("div");
   wrapper.className = "gallery-item";
+  wrapper.dataset.index = index;
 
   const img = document.createElement("img");
   img.src =
@@ -134,6 +134,10 @@ function appendToColumn(columnEl, item) {
     <p>${item.artist?.name || item.author || "Undefined"}</p>
   `;
   wrapper.appendChild(overlay);
+
+  wrapper.addEventListener("click", () => {
+    window.location.href = `slideshow.html?index=${index}`;
+  });
 
   columnEl.appendChild(wrapper);
 }
