@@ -12,13 +12,14 @@
     />
     <script type="module" src="/src/style.css"></script>
     <script type="module" src="/src/slideshow.js"></script>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <title>Galleria slideshow site</title>
   </head>
   <body>
     <load src="./src/components/Header.html" />
     <main>
-      <div class="flex flex-col items-center gap-50 p-6 md:p-12">
+      <div
+        class="flex flex-col items-center gap-50 p-6 md:p-10 xl:flex-row xl:gap-0"
+      >
         <div class="relative md:w-full">
           <img
             id="hero-img"
@@ -33,9 +34,13 @@
             VIEW IMAGE
           </button>
           <div
-            class="flex flex-col gap-2 absolute -bottom-20 left-0 bg-white p-6 z-100 mr-10 md:top-0 md:bottom-auto md:left-80 md:max-w-[445px] md:pb-16 md:pl-16 md:pt-0 md:pr-0 md:mr-12"
+            id="info-block"
+            class="flex flex-col gap-2 absolute -bottom-20 left-0 bg-white p-6 z-100 mr-10 md:top-0 md:bottom-auto md:left-80 md:max-w-[445px] md:pb-16 md:pl-16 md:pt-0 md:pr-0 md:mr-10 xl:mr-0"
           >
-            <h2 id="name" class="font-libre text-preset-2-mobile leading-125 md:text-preset-2 md:w-full">
+            <h2
+              id="name"
+              class="font-libre text-preset-2-mobile leading-125 md:text-preset-2 md:w-full"
+            >
               Girl with a Pearl Earring
             </h2>
             <h3
@@ -44,19 +49,24 @@
             >
               Vincent Van Gogh
             </h3>
-            <img id="artist-img" class="absolute w-16 h-16 -bottom-16 left-4 md:w-32 md:h-32 md:-bottom-32 md:left-45" src="/images/arnolfini-portrait/artist.jpg" alt="Artist">
+            <img
+              id="artist-img"
+              class="absolute w-16 h-16 -bottom-16 left-4 md:w-32 md:h-32 md:-bottom-32 md:left-45"
+              src="/images/arnolfini-portrait/artist.jpg"
+              alt="Artist"
+            />
           </div>
         </div>
-        <div class="flex flex-col relative">
+        <div class="flex flex-col relative xl:w-full xl:max-w-[476px]">
           <h1
             id="year"
-            class="text-preset-1-mobile text-grey-100 font-bold font-libre absolute -top-25 right-0 -z-10 md:text-preset-1 md:tracking-minus-02 md:leading-120 md:-left-30"
+            class="text-preset-1-mobile text-grey-100 font-bold font-libre absolute -top-25 right-0 -z-10 md:text-preset-1 md:tracking-minus-02 md:leading-120 md:-left-30 xl:left-8"
           >
             1665
           </h1>
           <p
             id="description"
-            class="font-libre text-preset-3-mobile text-grey-400 leading-200 font-bold max-w-[457px]"
+            class="font-libre text-preset-3-mobile text-grey-400 leading-200 font-bold max-w-[457px] xl:max-w-[350px]"
           >
             The painting is a tronie, the Dutch 17th-century description of a
             'head' that was not meant to be a portrait. It depicts a European
@@ -77,10 +87,10 @@
       </div>
     </main>
     <footer>
-      <div class="mt-16">
+      <div class="mt-16 xl:mt-30">
         <div id="progress" class="w-0 h-[1px] bg-black"></div>
         <div
-          class="px-6 flex items-center py-4 justify-between border-t-[1px] border-grey-150 md:px-12 md:py-6"
+          class="px-6 flex items-center py-4 justify-between border-t-[1px] border-grey-150 md:px-10 md:py-6"
         >
           <div class="flex flex-col md:gap-2">
             <h4

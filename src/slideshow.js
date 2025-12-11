@@ -58,6 +58,8 @@ function renderSlide() {
 
   const percent = ((index + 1) / paintings.length) * 100;
   progressEl.style.width = percent + "%";
+
+  positionArtistImage();
 }
 
 function next() {
@@ -82,5 +84,30 @@ if (slideBtn) {
     window.location.href = "index.html";
   });
 }
+
+function positionArtistImage() {
+  const artistImg = document.getElementById("artist-img");
+  const infoBlock = document.getElementById("info-block");
+
+  if (!artistImg || !infoBlock) return;
+
+  const base = 170;
+  const defaultHeight = 300;
+
+  const actual = infoBlock.offsetHeight;
+
+  console.log("InfoBlock height:", actual);
+
+  const extra = Math.max(actual - base, 0);
+
+  const bottom = -(base + defaultHeight - extra);
+
+  artistImg.style.bottom = `${bottom}px`;
+
+  console.log("Applied bottom:", bottom);
+}
+
+window.addEventListener("load", positionArtistImage);
+window.addEventListener("resize", positionArtistImage);
 
 loadPaintings();
