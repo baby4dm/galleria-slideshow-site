@@ -19,43 +19,44 @@
     <load src="./src/components/Header.html" />
     <main>
       <div class="flex flex-col items-center gap-50 p-6 md:p-12">
-        <div class="relative">
+        <div class="relative md:w-full">
           <img
             id="hero-img"
+            class="md:max-w-[475px] md:self-start"
             src="/images/girl-with-pearl-earring/hero-small.jpg"
             alt=""
           />
           <button
-            class="bg-black w-38 h-10 text-white absolute top-4 left-4 font-libre text-preset-7 tracking-2 leading-120 py-[14px] px-4 flex justify-between items-center"
+            class="bg-black w-38 h-10 text-white absolute top-4 left-4 font-libre text-preset-7 tracking-2 leading-120 py-[14px] px-4 flex justify-between items-center md:top-auto md:bottom-4"
           >
             <img src="/images/shared/icon-view-image.svg" alt="View image" />
             VIEW IMAGE
           </button>
           <div
-            class="flex flex-col gap-2 absolute -bottom-20 left-0 bg-white p-6 z-100 mr-10"
+            class="flex flex-col gap-2 absolute -bottom-20 left-0 bg-white p-6 z-100 mr-10 md:top-0 md:bottom-0 md:left-40 md:max-h-[300px] md:min-w-[445px] md:pb-16 md:pl-16 md:pt-0"
           >
-            <h2 id="name" class="font-libre text-preset-2-mobile leading-125">
+            <h2 id="name" class="font-libre text-preset-2-mobile leading-125 md:text-preset-2 md:w-full">
               Girl with a Pearl Earring
             </h2>
             <h3
               id="artist"
-              class="font-libre text-preset-4 text-grey-400 leading-125"
+              class="font-libre text-preset-4 text-grey-400 leading-125 md:text-preset-4"
             >
               Vincent Van Gogh
             </h3>
-            <img id="artist-img" class="absolute w-16 h-16 -bottom-16 left-4" src="/images/arnolfini-portrait/artist.jpg" alt="Artist">
+            <img id="artist-img" class="absolute w-16 h-16 -bottom-16 left-4 md:w-32 md:h-32 md:-bottom-32 md:left-auto md:right-15" src="/images/arnolfini-portrait/artist.jpg" alt="Artist">
           </div>
         </div>
         <div class="flex flex-col relative">
           <h1
             id="year"
-            class="text-preset-1-mobile text-grey-100 font-bold absolute -top-25 right-0 -z-10"
+            class="text-preset-1-mobile text-grey-100 font-bold font-libre absolute -top-25 right-0 -z-10 md:text-preset-1 md:tracking-minus-02 md:leading-120 md:-left-30"
           >
             1665
           </h1>
           <p
             id="description"
-            class="font-libre text-preset-3-mobile text-grey-400 leading-200 font-bold"
+            class="font-libre text-preset-3-mobile text-grey-400 leading-200 font-bold max-w-[457px]"
           >
             The painting is a tronie, the Dutch 17th-century description of a
             'head' that was not meant to be a portrait. It depicts a European
@@ -79,24 +80,24 @@
       <div class="mt-16">
         <div id="progress" class="w-0 h-[1px] bg-black"></div>
         <div
-          class="px-6 flex items-center py-4 justify-between border-t-[1px] border-grey-150 md:px-12"
+          class="px-6 flex items-center py-4 justify-between border-t-[1px] border-grey-150 md:px-12 md:py-6"
         >
-          <div>
+          <div class="flex flex-col md:gap-2">
             <h4
               id="name-footer"
-              class="text-preset-3-mobile font-bold font-libre leading-200 tracking-minus-025"
+              class="text-preset-3-mobile font-bold font-libre leading-200 tracking-minus-025 md:text-preset-3 leading-125"
             >
               Girl with a Pearl Earring
             </h4>
             <h5
               id="artist-footer"
-              class="text-preset-4-mobile font-bold font-libre leading-120 text-grey-400"
+              class="text-preset-4-mobile font-bold font-libre leading-120 text-grey-400 md:text-preset-4"
             >
               Johannes Vermeer
             </h5>
           </div>
-          <div class="flex items-center gap-6 h-4">
-            <button id="back-btn" class="cursor-pointer">
+          <div class="flex items-center gap-6 h-4 md:gap-10 md:h-6">
+            <button id="back-btn" class="cursor-pointer h-full">
               <svg width="26" height="24" xmlns="http://www.w3.org/2000/svg">
                 <g stroke="#000" fill="none" fill-rule="evenodd">
                   <path
@@ -107,7 +108,7 @@
                 </g>
               </svg>
             </button>
-            <button id="next-btn" class="cursor-pointer">
+            <button id="next-btn" class="cursor-pointer h-full">
               <svg width="26" height="24" xmlns="http://www.w3.org/2000/svg">
                 <g stroke="#000" fill="none" fill-rule="evenodd">
                   <path

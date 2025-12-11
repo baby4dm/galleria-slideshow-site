@@ -32,9 +32,8 @@ async function loadPaintings() {
 }
 
 function getHero(p) {
-  return window.innerWidth > 768
-    ? p.images.heroLarge || p.images.hero.large
-    : p.images.heroSmall || p.images.hero.small;
+  const isDesktop = window.innerWidth > 767;
+  return isDesktop ? p.images.hero.large : p.images.hero.small;
 }
 
 function renderSlide() {
