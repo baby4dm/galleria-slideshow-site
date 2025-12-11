@@ -24,6 +24,31 @@ const backBtn = document.getElementById("back-btn");
 const progressEl = document.getElementById("progress");
 
 const slideBtn = document.getElementById("slideshow-btn");
+const viewBtn = document.querySelector("button.bg-black");
+const galleryContainer = document.getElementById("gallery-img-container");
+const galleryImg = document.getElementById("gallery-img");
+const closeBtn = document.getElementById("close-gallery");
+
+viewBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  galleryImg.src = document.getElementById("hero-img").src;
+  galleryContainer.classList.remove("hidden");
+
+  document.body.style.overflow = "hidden";
+});
+
+closeBtn.addEventListener("click", () => {
+  galleryContainer.classList.add("hidden");
+
+  document.body.style.overflow = "";
+});
+
+galleryContainer.addEventListener("click", (e) => {
+  if (e.target === galleryContainer) {
+    galleryContainer.classList.add("hidden");
+    document.body.style.overflow = "";
+  }
+});
 
 async function loadPaintings() {
   const res = await fetch("/data/data.json");
