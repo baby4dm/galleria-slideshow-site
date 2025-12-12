@@ -1,5 +1,5 @@
 async function loadData() {
-  const res = `${import.meta.env.BASE_URL}data/data.json`;
+  const res = await fetch(`${import.meta.env.BASE_URL}data/data.json`);
   const items = await res.json();
   renderGallery(items);
 }
