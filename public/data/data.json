@@ -9,7 +9,7 @@
       "name": "Vincent Van Gogh"
     },
     "images": {
-      "thumbnail": "/images/starry-night/thumbnail.jpg",
+      "thumbnail": "./images/starry-night/thumbnail.jpg",
       "hero": {
         "small": "/images/starry-night/hero-small.jpg",
         "large": "/images/starry-night/hero-large.jpg"
@@ -27,7 +27,7 @@
       "name": "Johannes Vermeer"
     },
     "images": {
-      "thumbnail": "/images/girl-with-pearl-earring/thumbnail.jpg",
+      "thumbnail": "./images/girl-with-pearl-earring/thumbnail.jpg",
       "hero": {
         "small": "/images/girl-with-pearl-earring/hero-small.jpg",
         "large": "/images/girl-with-pearl-earring/hero-large.jpg"
