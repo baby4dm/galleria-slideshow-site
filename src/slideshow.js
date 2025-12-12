@@ -113,23 +113,17 @@ if (slideBtn) {
 function positionArtistImage() {
   const artistImg = document.getElementById("artist-img");
   const infoBlock = document.getElementById("info-block");
-
   if (!artistImg || !infoBlock) return;
-
+  if (window.innerWidth < 1280) {
+    artistImg.style.bottom = "";
+    return;
+  }
   const base = 170;
   const defaultHeight = 300;
-
   const actual = infoBlock.offsetHeight;
-
-  console.log("InfoBlock height:", actual);
-
   const extra = Math.max(actual - base, 0);
-
   const bottom = -(base + defaultHeight - extra);
-
   artistImg.style.bottom = `${bottom}px`;
-
-  console.log("Applied bottom:", bottom);
 }
 
 window.addEventListener("load", positionArtistImage);
