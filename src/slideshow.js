@@ -51,7 +51,7 @@ galleryContainer.addEventListener("click", (e) => {
 });
 
 async function loadPaintings() {
-  const res = `${import.meta.env.BASE_URL}data/data.json`;
+  const res = await fetch(`${import.meta.env.BASE_URL}data/data.json`);
   paintings = await res.json();
   renderSlide();
 }
