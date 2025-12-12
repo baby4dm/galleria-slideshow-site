@@ -113,8 +113,11 @@ function appendToColumn(columnEl, item, index) {
   if (!item) return;
 
   const wrapper = document.createElement("div");
-  wrapper.className = "gallery-item";
+  wrapper.className = "gallery-item group";
   wrapper.dataset.index = index;
+
+  const imgWrap = document.createElement("div");
+  imgWrap.className = "relative";
 
   const img = document.createElement("img");
   img.src =
@@ -124,8 +127,14 @@ function appendToColumn(columnEl, item, index) {
     item.src ||
     "";
   img.alt = item.title || "";
-  img.className = "gallery-img";
-  wrapper.appendChild(img);
+  img.className = "gallery-img block w-full h-auto";
+  imgWrap.appendChild(img);
+
+  const hoverOverlay = document.createElement("div");
+  hoverOverlay.className = "hover-overlay";
+  imgWrap.appendChild(hoverOverlay);
+
+  wrapper.appendChild(imgWrap);
 
   const overlay = document.createElement("div");
   overlay.className = "gallery-overlay";

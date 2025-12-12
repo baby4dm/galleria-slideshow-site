@@ -47,10 +47,12 @@
   }
 
   .gallery-overlay {
-    @apply absolute bottom-0 left-0 w-full p-8 flex flex-col gap-2 
+    @apply absolute bottom-0 left-0 w-full p-8 flex flex-col gap-2  
          bg-gradient-to-t from-black via-black/50 to-transparent text-white;
   }
-
+  .hover-overlay {
+    @apply absolute inset-0 bg-white opacity-0 group-hover:opacity-50 transition-opacity duration-300 pointer-events-none;
+  }
   .gallery-overlay h2 {
     @apply text-preset-2-mobile font-libre leading-125 font-bold;
   }
