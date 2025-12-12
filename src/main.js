@@ -1,5 +1,5 @@
 async function loadData() {
-  const res = await fetch("/data/data.json");
+  const res = await fetch("/src/data/data.json");
   const items = await res.json();
   renderGallery(items);
 }
